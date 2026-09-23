@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://qidsrra1kcrr"]
+
+[ext_resource type="PackedScene" uid="uid://d3j2eoc3i4jkm" path="res://Player/Player.tscn" id="1_xxnwy"]
+[ext_resource type="PackedScene" uid="uid://cugunpr4rj22u" path="res://Prefab/GroundNote.tscn" id="2_vw6bl"]
+
+[node name="Node3D" type="Node3D" unique_id=1218300009]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1142460441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+use_collision = true
+size = Vector3(9, 1, 7)
+
+[node name="Player" parent="." unique_id=1943154780 instance=ExtResource("1_xxnwy")]
+
+[node name="Note" parent="." unique_id=233313474 instance=ExtResource("2_vw6bl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3728032, -2.843596)

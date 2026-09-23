@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://d3j2eoc3i4jkm"]
+
+[ext_resource type="Script" uid="uid://ce4xc632id5ph" path="res://Player/Player.cs" id="1_3qydi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6i2tj"]
+radius = 0.60498047
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6i2tj"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1943154780]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_3qydi")
+HeadbobFreq = 2.62
+HeadbobAmp = 0.02
+
+[node name="StandingCol" type="CollisionShape3D" parent="." unique_id=972431382]
+shape = SubResource("CapsuleShape3D_6i2tj")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="CrouchingCol" type="CollisionShape3D" parent="." unique_id=525088161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.49708188, 0)
+shape = SubResource("SphereShape3D_6i2tj")
+
+[node name="head" type="Node3D" parent="." unique_id=941312960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=1226456821]
+
+[node name="RayCast3D" type="RayCast3D" parent="head" unique_id=1908703026]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -3, 0)
+collide_with_areas = true
+debug_shape_custom_color = Color(0.81694776, 9.62615e-08, 0.42000294, 1)
+debug_shape_thickness = 5
+
+[node name="CrouchDetect" type="RayCast3D" parent="." unique_id=759141864]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0)

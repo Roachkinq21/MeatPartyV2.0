@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cugunpr4rj22u"]
+
+[ext_resource type="PackedScene" uid="uid://ddniyvm8nrf7j" path="res://Prefab/letterbox/LetterBox.tscn" id="1_feo3g"]
+[ext_resource type="Script" uid="uid://s3fynnv3xwrg" path="res://Scripts/NoteInteractable.cs" id="1_iudri"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6i2tj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dle16"]
+size = Vector3(1, 0.033691406, 1)
+
+[node name="Note" type="Area3D" unique_id=233313474]
+script = ExtResource("1_iudri")
+CustomText = "res://Prefab/letterbox/letterbox_text/Test2.txt"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1271870284]
+shape = SubResource("BoxShape3D_6i2tj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=540410255]
+transform = Transform3D(0.48981717, 0, -0.25619224, 0, 1, 0, 0.2990305, 0, 0.41964734, 0, -0.4831543, 0)
+mesh = SubResource("BoxMesh_dle16")
+
+[node name="LetterBox" parent="." unique_id=1232036788 instance=ExtResource("1_feo3g")]
+
+[connection signal="Interacted" from="." to="." method="_on_interacted"]

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://ddniyvm8nrf7j"]
+
+[ext_resource type="Texture2D" uid="uid://dvvku6tvgskd" path="res://icon.svg" id="2_ynaoe"]
+
+[node name="LetterBox" type="Control" unique_id=1232036788]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=502164030]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -447.0
+offset_right = 872.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.36078432)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=1129575262]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/MarginContainer" unique_id=1452915053]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+fit_content = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1231565624]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -791.0
+offset_top = -362.0
+offset_right = -156.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ynaoe")
