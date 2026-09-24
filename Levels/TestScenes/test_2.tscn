@@ -3,7 +3,26 @@
 [ext_resource type="PackedScene" uid="uid://d3j2eoc3i4jkm" path="res://Player/Player.tscn" id="1_xxnwy"]
 [ext_resource type="PackedScene" uid="uid://cugunpr4rj22u" path="res://Prefab/GroundNote.tscn" id="2_vw6bl"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xxnwy"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_vw6bl"]
+sky_material = SubResource("ProceduralSkyMaterial_xxnwy")
+
+[sub_resource type="Environment" id="Environment_eeglw"]
+background_mode = 2
+sky = SubResource("Sky_vw6bl")
+glow_enabled = true
+
 [node name="Node3D" type="Node3D" unique_id=1218300009]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=738038775]
+environment = SubResource("Environment_eeglw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2076608293]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1142460441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -13,4 +32,5 @@ size = Vector3(9, 1, 7)
 [node name="Player" parent="." unique_id=1943154780 instance=ExtResource("1_xxnwy")]
 
 [node name="Note" parent="." unique_id=233313474 instance=ExtResource("2_vw6bl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3728032, -2.843596)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014441729, -2.843596)
+CustomText = "res://Prefab/letterbox/letterbox_text/Test1.txt"

@@ -13,6 +13,7 @@ collision_mask = 7
 script = ExtResource("1_3qydi")
 HeadbobFreq = 2.62
 HeadbobAmp = 0.02
+HeadRotateAmount = 0.02
 
 [node name="StandingCol" type="CollisionShape3D" parent="." unique_id=972431382]
 shape = SubResource("CapsuleShape3D_6i2tj")
