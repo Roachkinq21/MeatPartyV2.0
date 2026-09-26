@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d3j2eoc3i4jkm" path="res://Player/Player.tscn" id="1_xxnwy"]
 [ext_resource type="PackedScene" uid="uid://cugunpr4rj22u" path="res://Prefab/GroundNote.tscn" id="2_vw6bl"]
+[ext_resource type="PackedScene" uid="uid://dovaext67xu3r" path="res://Prefab/door.tscn" id="3_vw6bl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xxnwy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,12 +26,20 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1142460441]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18255615, -1, -1.0507202)
 use_collision = true
-size = Vector3(9, 1, 7)
+size = Vector3(55.38098, 1, 25.547974)
 
 [node name="Player" parent="." unique_id=1943154780 instance=ExtResource("1_xxnwy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5737303, 0)
 
 [node name="Note" parent="." unique_id=233313474 instance=ExtResource("2_vw6bl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014441729, -2.843596)
 CustomText = "res://Prefab/letterbox/letterbox_text/Test1.txt"
+
+[node name="Door" parent="." unique_id=241243934 node_paths=PackedStringArray("TeleportMarker") instance=ExtResource("3_vw6bl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.8647695)
+TeleportMarker = NodePath("../Marker3D")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=119129174]
+transform = Transform3D(-0.44378972, 0, 0.896131, 0, 1, 0, -0.896131, 0, -0.44378972, 5.523999, 1.2467272, -1.2599962)

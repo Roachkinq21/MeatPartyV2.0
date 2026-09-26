@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dovaext67xu3r"]
+
+[ext_resource type="Script" uid="uid://bc8wdump02ha4" path="res://Scripts/Interactables/Door.cs" id="1_23je0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dle16"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6i2tj"]
+
+[node name="Door" type="Area3D" unique_id=241243934]
+script = ExtResource("1_23je0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2013015565]
+shape = SubResource("BoxShape3D_dle16")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=349728214]
+mesh = SubResource("BoxMesh_6i2tj")
+
+[connection signal="Interacted" from="." to="." method="_on_interacted"]

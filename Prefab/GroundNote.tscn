@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cugunpr4rj22u"]
 
 [ext_resource type="PackedScene" uid="uid://ddniyvm8nrf7j" path="res://Prefab/letterbox/LetterBox.tscn" id="1_feo3g"]
-[ext_resource type="Script" uid="uid://s3fynnv3xwrg" path="res://Scripts/NoteInteractable.cs" id="1_iudri"]
+[ext_resource type="Script" uid="uid://s3fynnv3xwrg" path="res://Scripts/Interactables/NoteInteractable.cs" id="1_iudri"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6i2tj"]
 
