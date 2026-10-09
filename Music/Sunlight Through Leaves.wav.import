@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://m4oi1uaxlmfl"
+path="res://.godot/imported/Sunlight Through Leaves.wav-c3fbe5255f75fec7f011e32710aef8da.sample"
+
+[deps]
+
+source_file="res://Music/Sunlight Through Leaves.wav"
+dest_files=["res://.godot/imported/Sunlight Through Leaves.wav-c3fbe5255f75fec7f011e32710aef8da.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

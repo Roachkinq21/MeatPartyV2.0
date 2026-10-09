@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://brebeamkakf34"]
+
+[ext_resource type="Script" uid="uid://bpr2tan7aypb2" path="res://Scripts/Interactables/FocusModul.cs" id="1_wrbnm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6i2tj"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6i2tj"]
+height = 0.5
+
+[node name="FocusModul" type="Area3D" unique_id=1697838611]
+input_ray_pickable = false
+script = ExtResource("1_wrbnm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=191061544]
+shape = SubResource("BoxShape3D_6i2tj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=105055534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("CylinderMesh_6i2tj")
+
+[node name="FocusCam" type="Camera3D" parent="." unique_id=1381417031]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 1, 1)
+fov = 45.8
+
+[connection signal="Interacted" from="." to="." method="_on_interacted"]

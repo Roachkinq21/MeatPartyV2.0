@@ -18,8 +18,12 @@ public partial class Player : CharacterBody3D
 
     private bool _hasControl = true;
     private bool _isCrouching;
+
+    private bool _isInteracting;
     
-    
+    //SFX
+    private AudioStreamPlayer _jumpSfx;
+    private AudioStreamPlayer _stepSfx;
 
     private float _currentSpeed;
     [Export] public float DefaultSpeed { get; set; } = 4f;
@@ -63,6 +67,9 @@ public partial class Player : CharacterBody3D
         _standingHeadPos = new Vector3(0, 0.5f, 0);
         _crouchingHeadPos = _standingHeadPos + new Vector3(0, -0.8f, 0);
         _head.Position = _standingHeadPos;
+        
+        //SFX
+        _jumpSfx = GetNode<AudioStreamPlayer>("SFX/Jump");
         
         _currentSpeed = DefaultSpeed;
 
@@ -211,7 +218,7 @@ public partial class Player : CharacterBody3D
         {
             _currentSpeed = CrouchSpeed;
         }
-        else return;
+
     }
 
     private Vector3 HeadBob(float headbobTime)
@@ -231,7 +238,6 @@ public partial class Player : CharacterBody3D
             {
                 if (Input.IsActionJustPressed("interact"))
                 {
-                    GD.Print($"{collider}");
                     interactable.Interact(this);
                 }
                 
@@ -240,10 +246,13 @@ public partial class Player : CharacterBody3D
         }
     }
 
+
+
     private void Jump(ref Vector3 velocity)
     {
         if (IsOnFloor() && Input.IsActionJustPressed("jump"))
         {
+            _jumpSfx.Play();
             velocity.Y = _currentJumpVelocity;
         }
     }
