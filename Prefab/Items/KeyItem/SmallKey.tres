@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://4wnv4yadr63m"]
+
+[ext_resource type="ArrayMesh" uid="uid://olypt3aguwp0" path="res://Meshes/Items/key.res" id="1_42heq"]
+[ext_resource type="Script" uid="uid://df7qivapmga5a" path="res://Scripts/Resources/Item.cs" id="1_enq2e"]
+
+[resource]
+script = ExtResource("1_enq2e")
+ItemName = "Small Key"
+ItemDescription = "A key that looks like it could fit into any generic door."
+ItemMesh = ExtResource("1_42heq")
+metadata/_custom_type_script = "uid://df7qivapmga5a"

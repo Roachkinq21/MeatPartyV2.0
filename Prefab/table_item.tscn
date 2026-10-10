@@ -4,17 +4,18 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6i2tj"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_dle16"]
-
 [node name="TableItem" type="Area3D" unique_id=1421158821]
+monitoring = false
 script = ExtResource("1_g28ew")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=225314980]
 transform = Transform3D(0.18022642, 0, 0, 0, 0.18022642, 0, 0, 0, 0.18022642, 0, 0, 0)
 shape = SubResource("SphereShape3D_6i2tj")
+debug_color = Color(0.9778909, 0.34213024, 0.99999994, 0.41960785)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=677578238]
+[node name="TableMesh" type="MeshInstance3D" parent="." unique_id=677578238]
 transform = Transform3D(0.18022642, 0, 0, 0, 0.18022642, 0, 0, 0, 0.18022642, 0, 0, 0)
-mesh = SubResource("SphereMesh_dle16")
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=680653886]
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

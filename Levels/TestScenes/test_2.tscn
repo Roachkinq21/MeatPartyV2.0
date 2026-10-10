@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dovaext67xu3r" path="res://Prefab/door.tscn" id="3_vw6bl"]
 [ext_resource type="PackedScene" uid="uid://6lkli3aajpje" path="res://Levels/LevelModels/LivingRoom/living room.glb" id="4_eeglw"]
 [ext_resource type="PackedScene" uid="uid://brebeamkakf34" path="res://Prefab/FocusModul.tscn" id="5_03hmq"]
-[ext_resource type="AudioStream" uid="uid://m4oi1uaxlmfl" path="res://Music/Sunlight Through Leaves.wav" id="6_klpak"]
+[ext_resource type="AudioStream" uid="uid://m4oi1uaxlmfl" path="res://Audio/Music/Sunlight Through Leaves.wav" id="6_klpak"]
 [ext_resource type="PackedScene" uid="uid://dlm4jnliou8wo" path="res://Prefab/table_item.tscn" id="6_nuwu0"]
+[ext_resource type="Resource" uid="uid://4wnv4yadr63m" path="res://Prefab/Items/KeyItem/SmallKey.tres" id="7_a4uy8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xxnwy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -113,13 +114,15 @@ area_size = Vector2(26.295794, 26.12291)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, 0)
 
 [node name="TableItem" parent="FocusModul" unique_id=1421158821 instance=ExtResource("6_nuwu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.088911384, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.00663732, 0)
+Stats = ExtResource("7_a4uy8")
 
 [node name="TableItem2" parent="FocusModul" unique_id=1651305548 instance=ExtResource("6_nuwu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1435873e-08, 0.088911384, -0.26162243)
+transform = Transform3D(0.54202086, 0, -0.84036505, 0, 1, 0, 0.84036505, 0, 0.54202086, 1.1435873e-08, 0.004756093, -0.26162243)
 
 [node name="TableItem3" parent="FocusModul" unique_id=1305384973 instance=ExtResource("6_nuwu0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32340455, 0.088911384, -0.07958555)
+transform = Transform3D(0.45199656, 0, 0.8920197, 0, 1, 0, -0.8920197, 0, 0.45199656, 0.32581794, 0.0056364536, -0.07958555)
+Stats = ExtResource("7_a4uy8")
 
 [node name="Node" type="Node" parent="." unique_id=1170869300]
 

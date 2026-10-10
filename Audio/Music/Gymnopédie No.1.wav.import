@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dgrmgpdi2arfu"
-path="res://.godot/imported/Gymnopédie No.1.wav-82bd4c66222f5be9eac67d527c45ae73.sample"
+path="res://.godot/imported/Gymnopédie No.1.wav-34df80147b7baeeb18ae0198e6d2a67e.sample"
 
 [deps]
 
-source_file="res://Music/Gymnopédie No.1.wav"
-dest_files=["res://.godot/imported/Gymnopédie No.1.wav-82bd4c66222f5be9eac67d527c45ae73.sample"]
+source_file="res://Audio/Music/Gymnopédie No.1.wav"
+dest_files=["res://.godot/imported/Gymnopédie No.1.wav-34df80147b7baeeb18ae0198e6d2a67e.sample"]
 
 [params]
 

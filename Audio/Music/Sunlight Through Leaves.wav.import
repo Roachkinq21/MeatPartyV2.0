@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://m4oi1uaxlmfl"
-path="res://.godot/imported/Sunlight Through Leaves.wav-c3fbe5255f75fec7f011e32710aef8da.sample"
+path="res://.godot/imported/Sunlight Through Leaves.wav-9326a8ece89c8e262a04d823f2319783.sample"
 
 [deps]
 
-source_file="res://Music/Sunlight Through Leaves.wav"
-dest_files=["res://.godot/imported/Sunlight Through Leaves.wav-c3fbe5255f75fec7f011e32710aef8da.sample"]
+source_file="res://Audio/Music/Sunlight Through Leaves.wav"
+dest_files=["res://.godot/imported/Sunlight Through Leaves.wav-9326a8ece89c8e262a04d823f2319783.sample"]
 
 [params]
 
