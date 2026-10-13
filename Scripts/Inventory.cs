@@ -10,6 +10,7 @@ public partial class Inventory
     
     const int SIZE = 12;
     //private Godot.Collections.Array<ItemStack> items = new();
+    public static int SCORE = 0;
 
     public Inventory()
     {
@@ -20,9 +21,9 @@ public partial class Inventory
     }
 
 
-    public void AddItem(Item item)
+    public static void AddItem(Item item)
     {
-        
+        SCORE++;
     }
 
     public void RemoveItem(Item item)

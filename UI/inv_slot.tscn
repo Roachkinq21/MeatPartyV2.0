@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://r4k82sejjujn"]
+
+[ext_resource type="Theme" uid="uid://b154hydgx0628" path="res://Theme/MainTheme.tres" id="1_4n74j"]
+[ext_resource type="Texture2D" uid="uid://dvvku6tvgskd" path="res://icon.svg" id="2_1jh2n"]
+
+[node name="InvSlot" type="PanelContainer" unique_id=1293582810]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_4n74j")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=818551858]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=1294564306]
+layout_mode = 2
+texture = ExtResource("2_1jh2n")

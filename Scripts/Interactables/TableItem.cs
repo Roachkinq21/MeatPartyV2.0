@@ -1,4 +1,5 @@
 using Godot;
+using MeatPartyV0.Empty.Scripts;
 using MeatPartyV0.Empty.Scripts.Resources;
 
 public partial class TableItem : Area3D
@@ -24,6 +25,10 @@ public partial class TableItem : Area3D
         if (@event is InputEventMouseButton mouseButton &&
             mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
         {
+            if (Stats is Item item)
+            {
+                Inventory.AddItem(item);
+            }
             this.QueueFree();
         }
     }

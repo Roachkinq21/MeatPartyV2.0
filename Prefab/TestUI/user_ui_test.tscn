@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://deyjmq3j781qv"]
+
+[ext_resource type="Script" uid="uid://drxweaai7ssgk" path="res://Scripts/UI/UserUiTest.cs" id="1_da63j"]
+
+[node name="UserUITest" type="CanvasLayer" unique_id=158150472]
+script = ExtResource("1_da63j")
+
+[node name="Control" type="Control" parent="." unique_id=852390690]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="KeyCount" type="Label" parent="Control" unique_id=1688562235]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -259.0
+offset_top = -178.0
+grow_horizontal = 0
+grow_vertical = 0

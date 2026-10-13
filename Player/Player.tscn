@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ce4xc632id5ph" path="res://Player/Player.cs" id="1_3qydi"]
 [ext_resource type="AudioStream" uid="uid://dwjqbywjlqp3y" path="res://Audio/SFX/drop_004.ogg" id="2_q3lat"]
+[ext_resource type="PackedScene" uid="uid://deyjmq3j781qv" path="res://Prefab/TestUI/user_ui_test.tscn" id="3_tok1r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6i2tj"]
 radius = 0.60498047
@@ -47,3 +48,5 @@ volume_db = -12.552
 pitch_scale = 0.46
 
 [node name="Step" type="AudioStreamPlayer" parent="SFX" unique_id=1784926060]
+
+[node name="UserUITest" parent="." unique_id=158150472 instance=ExtResource("3_tok1r")]

@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://b154hydgx0628"]
+
+[sub_resource type="SystemFont" id="SystemFont_ti8mq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htk7t"]
+bg_color = Color(0.35164002, 0, 0.019714992, 1)
+corner_radius_top_right = 116
+shadow_color = Color(0.3650951, 0, 0.008106759, 0.6)
+shadow_size = 1
+shadow_offset = Vector2(5.59, 6.28)
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[resource]
+Label/fonts/font = SubResource("SystemFont_ti8mq")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_htk7t")
