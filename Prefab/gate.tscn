@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c8opiraqxxfpq"]
+
+[ext_resource type="Script" uid="uid://l4hciom7fnmp" path="res://Scripts/Interactables/Gate.cs" id="1_5is1w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fm6a1"]
+albedo_color = Color(0.73583, 0.5412828, 0.8285239, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6i2tj"]
+material = SubResource("StandardMaterial3D_fm6a1")
+size = Vector3(9, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6i2tj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dle16"]
+size = Vector3(9, 2, 1)
+
+[node name="Gate" type="Area3D" unique_id=261763891]
+script = ExtResource("1_5is1w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=326535217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_6i2tj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=840375153]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 0, 0, 0)
+shape = SubResource("BoxShape3D_6i2tj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1863968079]
+
+[node name="Collision" type="CollisionShape3D" parent="StaticBody3D" unique_id=702334062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_dle16")
+
+[connection signal="Interacted" from="." to="." method="_on_interacted" flags=6]

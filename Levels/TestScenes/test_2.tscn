@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://m4oi1uaxlmfl" path="res://Audio/Music/Sunlight Through Leaves.wav" id="6_klpak"]
 [ext_resource type="PackedScene" uid="uid://dlm4jnliou8wo" path="res://Prefab/table_item.tscn" id="6_nuwu0"]
 [ext_resource type="Resource" uid="uid://4wnv4yadr63m" path="res://Prefab/Items/KeyItem/SmallKey.tres" id="7_a4uy8"]
+[ext_resource type="PackedScene" uid="uid://c8opiraqxxfpq" path="res://Prefab/gate.tscn" id="8_ypxmy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xxnwy"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -123,6 +124,9 @@ transform = Transform3D(0.54202086, 0, -0.84036505, 0, 1, 0, 0.84036505, 0, 0.54
 [node name="TableItem3" parent="FocusModul" unique_id=1305384973 instance=ExtResource("6_nuwu0")]
 transform = Transform3D(0.45199656, 0, 0.8920197, 0, 1, 0, -0.8920197, 0, 0.45199656, 0.32581794, 0.0056364536, -0.07958555)
 Stats = ExtResource("7_a4uy8")
+
+[node name="Gate" parent="." unique_id=261763891 instance=ExtResource("8_ypxmy")]
+transform = Transform3D(-0.9999416, 0, 0.010814756, 0, 1, 0, -0.010814756, 0, -0.9999416, 1.6096215, 0.0056364536, 15.810507)
 
 [node name="Node" type="Node" parent="." unique_id=1170869300]
 

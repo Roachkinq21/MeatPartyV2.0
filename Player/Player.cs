@@ -12,13 +12,11 @@ public partial class Player : CharacterBody3D
     private CollisionShape3D _standingCol;
     private CollisionShape3D _crouchingCol;
     private RayCast3D _crouchDetect;
-
     private Vector3 _standingHeadPos;
     private Vector3 _crouchingHeadPos;
 
     private bool _hasControl = true;
     private bool _isCrouching;
-
     private bool _isInteracting;
     
     //SFX
@@ -26,6 +24,7 @@ public partial class Player : CharacterBody3D
     private AudioStreamPlayer _stepSfx;
 
     private float _currentSpeed;
+    
     [Export] public float DefaultSpeed { get; set; } = 4f;
     [Export] public float SprintMultiplier { get; set; } = 2.3f;
     [Export] public float CrouchSpeed { get; set; } = 1.5f;
@@ -54,7 +53,7 @@ public partial class Player : CharacterBody3D
 
     public override void _Ready()
     {
-        var global = GetNode<Global>("/root/Global");
+        GetNode<Global>("/root/Global");
         
         Input.MouseMode = Input.MouseModeEnum.Captured;
         _head = GetNode<Node3D>("head");
@@ -63,16 +62,12 @@ public partial class Player : CharacterBody3D
         _standingCol = GetNode<CollisionShape3D>("StandingCol");
         _crouchingCol = GetNode<CollisionShape3D>("CrouchingCol");
         _crouchDetect = GetNode<RayCast3D>("CrouchDetect");
-
         _standingHeadPos = new Vector3(0, 0.5f, 0);
         _crouchingHeadPos = _standingHeadPos + new Vector3(0, -0.8f, 0);
         _head.Position = _standingHeadPos;
-        
         //SFX
         _jumpSfx = GetNode<AudioStreamPlayer>("SFX/Jump");
-        
         _currentSpeed = DefaultSpeed;
-
         _crouchingCol.Disabled = true;
 
         
@@ -148,7 +143,7 @@ public partial class Player : CharacterBody3D
             if (inputDir != Vector2.Zero)
             {
                 _direction = _direction.Lerp(
-                    (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)),
+                    Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y),
                     fDelta * AirLerpSpeed);
             }
         }
